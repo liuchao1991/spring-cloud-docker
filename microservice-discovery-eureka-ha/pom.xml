@@ -3,15 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>microservice-simple-consumer-movie</artifactId>
+    <groupId>com.liuchao.cloud</groupId>
+    <artifactId>microservice-discovery-eureka-ha</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>microservice-simple-consumer-movie</name>
+    <name>microservice-discovery-eureka-ha</name>
     <description>Micro Service for Spring Cloud</description>
 
-    <!-- 引入spring boot的依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -28,25 +27,16 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
-        </dependency>
     </dependencies>
 
-    <!-- 引入spring cloud的依赖 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -67,5 +57,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
