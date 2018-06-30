@@ -1,0 +1,46 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: microservice-provider-user
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+      classpath: @java.class.path@
+
+eureka:
+  client:
+    service-url:
+      # default-zone: http://localhost:8761/eureka/
+      # default-zone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+      # default-zone: http://user:password123@localhost:8761/eureka
+      defaultZone: http://user:password123@localhost:8761/eureka/  #注册 中心已经开启认证
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      # 自定义的元数据, key/value都可以随便写
+      my-metadata: 我自定义的元数据
+
+

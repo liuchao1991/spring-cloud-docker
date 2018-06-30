@@ -30,13 +30,5 @@ info:
       target: @java.version@
       classpath: @java.class.path@
 
-eureka:
-  client:
-    service-url:
-      # default-zone: http://localhost:8761/eureka/
-      # default-zone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
-      default-zone: http://user:password123@localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
 
 
