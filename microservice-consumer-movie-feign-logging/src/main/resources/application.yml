@@ -1,0 +1,21 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: microservice-consumer-movie
+
+logging:
+  level:
+    # 将Feign接口的日志级别设置成debug，因为Feign的Logger.Level只对debug做出响应
+    com.liuchao.cloud.feign.UserFeignClient: debug
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+user:
+  userServiceUrl: http://localhost:8000/user/
