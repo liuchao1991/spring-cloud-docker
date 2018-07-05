@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>microservice-provider-user</name>
+    <name>microservice-provider-user-with-auth</name>
     <description>Micro Service for Spring Cloud</description>
 
     <!-- 引入spring boot的依赖 -->

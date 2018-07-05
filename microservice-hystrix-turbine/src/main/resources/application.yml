@@ -14,4 +14,4 @@ eureka:
 
 turbine:
   app-config: microservice-consumer-movie, microservice-consumer-movie-feign-hystrix-fallback-stream
-  cluster-name-expression: "''default"
+  cluster-name-expression: "'default'"
